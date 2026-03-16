@@ -1,6 +1,6 @@
 # Project_Software_Testing_and_QA
 
-# Estratégia de Testes --- Restaurante
+# Estratégia de Testes -> Restaurante
 
 ## Objetivo
 
