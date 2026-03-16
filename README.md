@@ -1,4 +1,6 @@
 # Project_Software_Testing_and_QA
+By: Lucas Mourato & Rafael Sampaio
+
 
 # Estratégia de Testes -> Restaurante
 
