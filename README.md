@@ -6,7 +6,7 @@ By: Lucas Mourato & Rafael Sampaio
 
 ## Objetivo
 
-Garantir que o sistema do restaurante um sistema bom e funcional para os clientes que eles possam reservar com antecedencia, ver o cardapio, fazer o pedido. Assim como garantir com que os funcionários consigam receber e entregar os pedidos corretos respectivamente para cada mesa.
+Garantir que o sistema do restaurante seja bom e funcional para os clientes, permitindo que eles possam reservar mesas com antecedência, visualizar o cardápio e realizar pedidos. Além disso, garantir que os funcionários consigam receber e entregar os pedidos corretamente para as respectivas mesas.
 
 ------------------------------------------------------------------------
 
@@ -17,28 +17,51 @@ Garantir que o sistema do restaurante um sistema bom e funcional para os cliente
 Verificar se cada requisito funcional e não funcional está implementado
 corretamente.
 
-### Teste Funcional
+### Histórias de Usuário
 
 Validar as funcionalidades principais do sistema:
 
--   Consultar o cardápio.
+<!-- -   Consultar o cardápio.
 -   Editar o cardápio.
 -   Registrar pedido.
--   Reservar mesa.
+-   Reservar mesa. -->
+1. Cliente visualiza os itens disponíveis no cardápio.
 
-### Teste Não Funcional
+2. Cliente adiciona um item ao carrinho do pedido.
 
-- 
+3. Cliente remove um item previamente adicionado ao carrinho.
+
+4. Cliente adiciona uma observação de preparo a um item (exemplo: sem cebola).
+
+5. Cliente visualiza o subtotal da conta atualizado ao adicionar novos itens.
+
+6. Cliente aciona o botão de chamar o garçom para a mesa.
+
+7. Cliente solicita o fechamento da conta.
+
+8. Cliente aplica um código de cupom de desconto no subtotal.
+
+9. Cliente divide o valor total da conta por um número específico de pessoas.
+
+10. Cliente reserva uma mesa para um horário futuro no sistema.
+
+11. Cliente realiza o pagamento simulado da refeição.
+
+12. Cliente adiciona uma avaliação em estrelas ao final do atendimento.
+
+13. Cliente cancela um pedido que ainda está com status "Aguardando Preparo".
+
+14. Cliente filtra o cardápio para exibir apenas opções vegetarianas.
 
 ### Teste de Regras de Negócio
 
 Garantir que regras importantes sejam respeitadas:
 
--   Garantir ordem dos pedidos.
--   Garantir que tenha o endereço de entrega, ou seja, dono do pedido.
--   Garantir fora de pagamento.
--   Garantir mesa já reservada não pode ser ocupada.
--   
+-   Garantir a ordem de preparo dos pedidos.
+-   Garantir a identificação correta do dono do pedido (mesa ou endereço de entrega).
+-   Garantir a validação da forma de pagamento.
+-   Garantir que uma mesa já reservada ou ocupada não possa ser utilizada por outros clientes.
+
 
 ### Teste de Aceitação
 
@@ -49,10 +72,16 @@ personas.
 
 ## Critérios de Qualidade
 
--   integridade dos dados
--   consistência dos requisitos
--   confiabilidade do sistema
--   usabilidade da interface
+-   Integridade dos dados
+-   Consistência dos requisitos
+-   Confiabilidade do sistema
+-   Usabilidade da interface
+
+### Limiar de cobertura
+
+```
+pytest --cov=app --cov-report=term-missing --cov-fail-under=90
+````
 
 ------------------------------------------------------------------------
 
@@ -60,6 +89,6 @@ personas.
 
 Os testes podem ser realizados utilizando:
 
--   testes manuais
--   checklist de validação
--   revisão de requisitos
+-   Testes manuais
+-   Checklist de validação
+-   Revisão de requisitos
