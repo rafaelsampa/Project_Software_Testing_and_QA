@@ -21,3 +21,14 @@ def test_reservar_mesa():
     pedido.reservar_mesa("2026-04-10 20:00", 4)
     assert pedido.reserva["pessoas"] == 4
     assert pedido.reserva["data_hora"] == "2026-04-10 20:00"
+
+
+
+
+
+# pytest
+# pytest -v
+# pytest --cov=app
+# pytest --cov=app --cov-report=term-missing
+
+
