@@ -25,33 +25,27 @@ Validar as funcionalidades principais do sistema:
 -   Editar o cardápio.
 -   Registrar pedido.
 -   Reservar mesa. -->
-1. Cliente visualiza os itens disponíveis no cardápio.
 
-2. Cliente adiciona um item ao carrinho do pedido.
+**Lista Completa das Histórias de Usuário:**
+1. Cliente visualiza o cardápio
+2. Cliente filtra opções vegetarianas
+3. Cliente adiciona item ao carrinho
+4. Cliente remove item do carrinho
+5. Cliente adiciona observação ao prato
+6. Cliente visualiza o subtotal atualizado
+7. Cliente chama o garçom
+8. Cliente envia pedido para a cozinha
+9. Cliente cancela pedido antes do preparo
+10. Cliente aplica cupom de desconto
+11. Cliente solicita fechamento da conta
+12. Cliente divide o valor da conta
+13. Cliente realiza o pagamento com troco
+14. Cliente avalia o atendimento
+15. Cliente reserva uma mesa
+16. Cliente tenta dividir a conta por zero pessoas
+17. Cliente tenta pagar um valor menor que o devido
+18. Cliente tenta dar uma nota inválida
 
-3. Cliente remove um item previamente adicionado ao carrinho.
-
-4. Cliente adiciona uma observação de preparo a um item (exemplo: sem cebola).
-
-5. Cliente visualiza o subtotal da conta atualizado ao adicionar novos itens.
-
-6. Cliente aciona o botão de chamar o garçom para a mesa.
-
-7. Cliente solicita o fechamento da conta.
-
-8. Cliente aplica um código de cupom de desconto no subtotal.
-
-9. Cliente divide o valor total da conta por um número específico de pessoas.
-
-10. Cliente reserva uma mesa para um horário futuro no sistema.
-
-11. Cliente realiza o pagamento simulado da refeição.
-
-12. Cliente adiciona uma avaliação em estrelas ao final do atendimento.
-
-13. Cliente cancela um pedido que ainda está com status "Aguardando Preparo".
-
-14. Cliente filtra o cardápio para exibir apenas opções vegetarianas.
 
 ### Teste de Regras de Negócio
 
