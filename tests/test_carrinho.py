@@ -37,3 +37,21 @@ def test_cancelar_pedido_aguardando_preparo():
     pedido.enviar_para_cozinha()
     pedido.cancelar_pedido()
     assert pedido.status == "Cancelado"
+
+# História: Cliente tenta adicionar um item que não existe no cardápio
+def test_adicionar_item_inexistente():
+    pedido = Pedido()
+    pedido.adicionar_item(999) # ID inexistente
+    assert len(pedido.itens) == 0 # O carrinho deve continuar vazio
+
+# História: Cliente tenta remover um item de um carrinho vazio ou item não listado !!! Edge case !!!
+def test_remover_item_inexistente_ou_carrinho_vazio():
+    pedido = Pedido()
+    pedido.remover_item(1) # Não deve quebrar o código
+    assert len(pedido.itens) == 0
+    
+    pedido.adicionar_item(2)
+    pedido.remover_item(999) # Tenta remover item que não está no carrinho
+    assert len(pedido.itens) == 1 # O item 2 deve continuar lá
+
+
