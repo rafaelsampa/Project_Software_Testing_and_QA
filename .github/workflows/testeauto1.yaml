@@ -3,12 +3,11 @@ name: verificação de teste automatizado
 on: 
   push:
    branches: [main]
-  pull_request
+  pull_request:
 
 jobs:
-  continuous integration:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.8
