@@ -74,3 +74,32 @@ A suíte pode ser executada garantindo a consistência dos resultados com o coma
 `pytest tests/ -v`
 
 As evidências de execução (prints do terminal comprovando o sucesso dos testes e a comunicação entre as camadas) foram anexadas junto a esta entrega.
+
+# Projeto Integrador: Etapa 4 
+
+### Ferramentas utilizadas
+- **pytest-cov** – geração do relatório de cobertura de código
+- **pylint** – análise estática de qualidade, identificação de code smells e complexidade (nota obtida: **7.9/10**)
+
+### Principais problemas identificados
+- Captura genérica de exceção em `cli.py` (linha 118): o `except Exception` único cobre toda a interface sem distinguir tipos de erro, dificultando depuração
+- Falha silenciosa em `services.py` (`adicionar_item`): se o ID do item não existir, a função retorna sem avisar o usuário ou lançar exceção
+- Ausência de persistência real: o cardápio é fixo no código e pedidos não sobrevivem entre execuções
+
+### Riscos do código atual
+- Não existem testes cobrindo sequências de ações independentes encadeadas (ex: adicionar item → aplicar cupom → pagar em fluxo único), o que pode deixar interações entre funções sem validação
+- `reservar_mesa()` não valida data, horário ou quantidade de pessoas, aceitando entradas incoerentes sem erro
+
+### Pontos fortes do projeto
+- Cobertura de 99% com 42 testes passando, incluindo casos de erro e não apenas o caminho feliz
+- Separação clara entre camadas: `models`, `repository`, `services` e `cli`
+- Pipeline de CI/CD automatizado via GitHub Actions com cobertura mínima exigida de 90%
+- Nota 7.9/10 no pylint confirma código bem escrito e aderente a boas práticas
+
+### Ideias para Prioridades de melhoria
+1. Substituir o `except Exception` genérico por tratamentos específicos para `ValueError` e erros inesperados
+2. Adicionar retorno/exceção em `adicionar_item()` quando o ID não existe
+3. Ampliar os cenários BDD com fluxos completos de pedido
+4. Substituir o repositório em memória por SQLite para persistência real
+
+
