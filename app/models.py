@@ -1,6 +1,8 @@
 class Produto:
-    def __init__(self, id, nome, preco, vegetariano):
-        self.id = id
+    """Item disponível no cardápio."""
+
+    def __init__(self, produto_id, nome, preco, vegetariano):
+        self.id = produto_id
         self.nome = nome
         self.preco = preco
         self.vegetariano = vegetariano
