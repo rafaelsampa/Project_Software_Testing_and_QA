@@ -1,3 +1,6 @@
+"""Modelos de dados do sistema de pedidos do restaurante."""
+
+
 class Produto:
     """Item disponível no cardápio."""
 
@@ -9,6 +12,8 @@ class Produto:
 
 
 class Pedido:
+    """Pedido em aberto com itens, status e dados associados."""
+
     def __init__(self):
         self.itens = []
         self.status = "Aberto"
