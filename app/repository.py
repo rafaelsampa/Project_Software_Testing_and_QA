@@ -5,7 +5,8 @@ cardapio = [
     Produto(1, "Hamburguer", 35.0, False),
     Produto(2, "Salada", 25.0, True),
     Produto(3, "Suco", 10.0, True),
-    Produto(4, "Fritas", 15.0, True)
+    Produto(4, "Fritas", 15.0, True),
+    Produto(5, "Pizza", 40.0, False)
 ]
 
 
